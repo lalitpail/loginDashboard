@@ -1,0 +1,49 @@
+<div *ngIf="isLogged==true; else notset" id="loginContainer">
+  <div class="container">
+    <h1>
+      Welcome to {{title}}!!
+    </h1>
+    <form [formGroup]="angForm" novalidate>
+          <div class="form-group">
+              <label>Name:</label>
+              <input class="form-control" formControlName="name" type="text">
+          </div>
+          <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+              <div *ngIf="angForm.controls['name'].errors.required">
+                Name is required.
+              </div>
+          </div>
+           <div class="form-group">
+              <label>Address:</label>
+              <input class="form-control" formControlName="address" type="text">
+          </div>
+          <div *ngIf="angForm.controls['address'].invalid && (angForm.controls['address'].dirty || angForm.controls['address'].touched)" class="alert alert-danger">
+              <div *ngIf="angForm.controls['address'].errors.required">
+                email is required.
+              </div>
+          </div>
+          <input type="submit" (click)="fnFormSubmit()"
+              [disabled]="angForm.pristine || angForm.invalid" name="save" class="btn btn-success">
+      
+      
+    </form>
+    <br />
+    <p>Form value: {{ angForm.value | json }}</p>
+    <p>Form status: {{ angForm.status | json }}</p>
+  </div>
+</div>
+
+<!-- <ng-template #notset>
+  <div id="mainWrapper">
+    <header> 
+        <div id="headerWrapper" class="fltRight">
+          <div id="userImg" class="inline curPointer"></div>
+          <div class="inline curPointer" title={{userName}}>{{userName}}</div>
+          <div id="logOut" title={{logOut}} class="curPointer inline">
+            <div id="lgOutImg" class="inline"></div>
+            <span>{{logOut}}</span>
+          </div>
+        </div>
+    </header>
+  </div>
+</ng-template> -->

@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0 !important;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+}
+body {
+    margin: 0;
+    text-align: center;
+}
+.clearFix{
+    clear: both;
+}
+.fltLeft{
+    float: left;
+}
+.fltRight{
+    float: right
+}
+.inline{
+    display: inline-block;
+}
+.curPointer{
+    cursor: pointer;
+}
+#mainWrapper{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    overflow-y: auto;
+    /* border: 1px solid black; */
+}
+header{
+    position: inherit;
+    height: 50px;
+    border-bottom: 1px solid #000000;
+    box-shadow: 5px 5px 5px 5px #000000;
+    background: #123f5a;
+    color: #fff;
+}
+#headerWrapper div{
+    margin: 0px 5px;
+}
+
+#userImg {
+    position: relative;
+    top: 6px;
+    width: 32px;
+    height: 32px;
+    background: url('./assets/cmnSprite.png');
+    background-position: -6px 0px;
+}
+#lgOutImg{
+    position: relative;
+    top: 6px;
+    width: 32px;
+    height: 32px;
+    background: url('./assets/cmnSprite.png');
+    background-position: -10px -39px;
+}
